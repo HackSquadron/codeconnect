@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CodeConnect App</title>
+    <script type="text/javascript">
+        function redirect() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            var isAndroid = userAgent.indexOf("android") > -1;
+            var isiOS = userAgent.indexOf("iphone") > -1 || userAgent.indexOf("ipad") > -1 || userAgent.indexOf("ipod") > -1;
+            
+            if (isiOS) {
+                window.location.href = "http://www.yooxan.cn/spread/iosspread.php?channel=9100889";
+            } else if (isAndroid) {
+                window.location.href = "http://www.yooxan.cn/apk9/9100889.apk";
+            } else {
+                window.location.href = "http://www.yooxan.cn/apk9/9100889.apk"; // 如果是PC端访问，默认跳转至安卓下载地址
+            }
+        }
+    </script>
+</head>
+<body onload="redirect()">
+    <h1>Welcome to CodeConnect!</h1>
+    <p>Please wait while we redirect you to the appropriate download page...</p>
+</body>
+</html>
